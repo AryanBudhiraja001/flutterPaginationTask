@@ -3,12 +3,14 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_task/core/authManager.dart';
 import 'package:flutter_task/extras/constant/common_laoder.dart';
 import 'package:flutter_task/model/dashboadModel.dart';
 import 'package:flutter_task/services/repo/common_repo.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+  AuthenticationManager manager = Get.put(AuthenticationManager());
   final scrollController = ScrollController();
   int i=0;
   int j=10;

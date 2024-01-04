@@ -18,9 +18,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child:
-        Obx(()=>
-        Column(
+        child: Obx(()=> Column(
           children: [
             Container(
 
@@ -54,13 +52,18 @@ class HomeScreen extends StatelessWidget {
 
 
 
-                    Container(
-                      alignment: Alignment.center,
-                      child: Image.asset(
-                        ImageConstant.imgLogout,color: Colors.white,
-                        height: 30,
-                        width: 30, fit: BoxFit.fill,
+                    InkWell(
+                      onTap: (){
+                        showAlertDialog(context);
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        child: Image.asset(
+                          ImageConstant.imgLogout,color: Colors.white,
+                          height: 30,
+                          width: 30, fit: BoxFit.fill,
 
+                        ),
                       ),
                     )
                   ],
@@ -197,4 +200,39 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
+
+
+   showAlertDialog(BuildContext context) {
+     Widget okButton = TextButton(
+       child: Text("Yes"),
+       onPressed: () {
+         homeController.manager.logOut();
+       },
+     );
+     Widget noButton = TextButton(
+       child: Text("No"),
+       onPressed: () {
+         Get.back();
+         // dashboardData.manager.logOut();
+       },
+     );
+     // set up the AlertDialog
+     AlertDialog alert = AlertDialog(
+       content: Text("Are you sure you want to logout?"),
+       actions: [
+         okButton,
+         noButton,
+
+       ],
+     );
+
+
+     showDialog(
+       context: context,
+       builder: (BuildContext context) {
+         return alert;
+       },
+     );
+   }
 }
