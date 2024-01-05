@@ -1,10 +1,12 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_task/screen/splashScreen.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+
+import 'screen/detailScreen.dart';
 
 
 
@@ -14,6 +16,9 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
+
+
+
 
 
 
@@ -35,9 +40,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     WidgetsFlutterBinding.ensureInitialized();
-    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    //     statusBarIconBrightness: Brightness.dark // dark text for status bar
-    // ));
     return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),

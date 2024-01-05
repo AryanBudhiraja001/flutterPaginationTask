@@ -13,61 +13,98 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/krishnamacmini61/Documents/flutter_task/android/app/src/debug/AndroidManifest.xml:7:5-66
-15-->/Users/krishnamacmini61/Documents/flutter_task/android/app/src/debug/AndroidManifest.xml:7:22-64
-16
-17    <application
-18        android:name="android.app.Application"
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.6.0] /Users/krishnamacmini61/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
-20        android:debuggable="true"
-21        android:icon="@mipmap/ic_launcher"
-22        android:label="flutter_task" >
-23        <activity
-24            android:name="com.example.flutter_task.MainActivity"
-25            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-26            android:exported="true"
-27            android:hardwareAccelerated="true"
-28            android:launchMode="singleTop"
-29            android:theme="@style/LaunchTheme"
-30            android:windowSoftInputMode="adjustResize" >
-31
-32            <!--
-33                 Specifies an Android theme to apply to this Activity as soon as
-34                 the Android process has started. This theme is visible to the user
-35                 while the Flutter UI initializes. After that, this theme continues
-36                 to determine the Window background behind the Flutter UI.
-37            -->
-38            <meta-data
-39                android:name="io.flutter.embedding.android.NormalTheme"
-40                android:resource="@style/NormalTheme" />
-41
-42            <intent-filter>
-43                <action android:name="android.intent.action.MAIN" />
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-46            </intent-filter>
-47        </activity>
-48        <!--
-49             Don't delete the meta-data below.
-50             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-51        -->
-52        <meta-data
-53            android:name="flutterEmbedding"
-54            android:value="2" />
-55
-56        <uses-library
-56-->[androidx.window:window:1.0.0-beta04] /Users/krishnamacmini61/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-57            android:name="androidx.window.extensions"
-57-->[androidx.window:window:1.0.0-beta04] /Users/krishnamacmini61/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-58            android:required="false" />
-58-->[androidx.window:window:1.0.0-beta04] /Users/krishnamacmini61/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-59        <uses-library
-59-->[androidx.window:window:1.0.0-beta04] /Users/krishnamacmini61/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-60            android:name="androidx.window.sidecar"
-60-->[androidx.window:window:1.0.0-beta04] /Users/krishnamacmini61/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-61            android:required="false" />
-61-->[androidx.window:window:1.0.0-beta04] /Users/krishnamacmini61/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-62    </application>
-63
-64</manifest>
+15-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/debug/AndroidManifest.xml:7:5-66
+15-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/debug/AndroidManifest.xml:7:22-64
+16    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+16-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:4:5-80
+16-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:4:22-78
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:5:5-66
+17-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:5:22-63
+18    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+18-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:6:5-81
+18-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:6:22-78
+19    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+19-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:7:5-74
+19-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:7:22-71
+20    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+20-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:8:5-76
+20-->/Users/aryanbudhiraja/Desktop/Aryan/paginationTask/android/app/src/main/AndroidManifest.xml:8:22-74
+21
+22    <application
+23        android:name="android.app.Application"
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.6.0] /Users/aryanbudhiraja/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+27        android:label="flutter_task" >
+28        <activity
+29            android:name="com.example.flutter_task.MainActivity"
+30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+31            android:exported="true"
+32            android:hardwareAccelerated="true"
+33            android:launchMode="singleTop"
+34            android:theme="@style/LaunchTheme"
+35            android:windowSoftInputMode="adjustResize" >
+36
+37            <!--
+38                 Specifies an Android theme to apply to this Activity as soon as
+39                 the Android process has started. This theme is visible to the user
+40                 while the Flutter UI initializes. After that, this theme continues
+41                 to determine the Window background behind the Flutter UI.
+42            -->
+43            <meta-data
+44                android:name="io.flutter.embedding.android.NormalTheme"
+45                android:resource="@style/NormalTheme" />
+46
+47            <intent-filter>
+48                <action android:name="android.intent.action.MAIN" />
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+51            </intent-filter>
+52        </activity>
+53        <!--
+54             Don't delete the meta-data below.
+55             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+56        -->
+57        <meta-data
+58            android:name="flutterEmbedding"
+59            android:value="2" />
+60
+61        <service
+62            android:name="com.dexterous.flutterlocalnotifications.ForegroundService"
+63            android:exported="false"
+64            android:stopWithTask="false" />
+65
+66        <receiver
+67            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+68            android:exported="false" />
+69        <receiver
+70            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+71            android:exported="false" />
+72        <receiver
+73            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+74            android:exported="false" >
+75            <intent-filter>
+76                <action android:name="android.intent.action.BOOT_COMPLETED" />
+77                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+78                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+79                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+80            </intent-filter>
+81        </receiver>
+82
+83        <uses-library
+83-->[androidx.window:window:1.0.0-beta04] /Users/aryanbudhiraja/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+84            android:name="androidx.window.extensions"
+84-->[androidx.window:window:1.0.0-beta04] /Users/aryanbudhiraja/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+85            android:required="false" />
+85-->[androidx.window:window:1.0.0-beta04] /Users/aryanbudhiraja/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+86        <uses-library
+86-->[androidx.window:window:1.0.0-beta04] /Users/aryanbudhiraja/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+87            android:name="androidx.window.sidecar"
+87-->[androidx.window:window:1.0.0-beta04] /Users/aryanbudhiraja/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+88            android:required="false" />
+88-->[androidx.window:window:1.0.0-beta04] /Users/aryanbudhiraja/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+89    </application>
+90
+91</manifest>

@@ -24,8 +24,8 @@ class LoginController extends GetxController{
   void onInit() {
     // TODO: implement onInit
     super.onInit();
-    clientIdCont.value.text = "testing.test3215@gmail.com";
-    passwordCont.value.text = "12345678";
+    // clientIdCont.value.text = "testing.test3215@gmail.com";
+    // passwordCont.value.text = "12345678";
   }
 
   onChange(){

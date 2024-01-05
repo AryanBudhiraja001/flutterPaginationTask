@@ -1,12 +1,16 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_task/controller/homeController.dart';
 import 'package:flutter_task/extras/constant/app_constant.dart';
 import 'package:flutter_task/extras/constant/app_images.dart';
+import 'package:flutter_task/screen/detailScreen.dart';
 import 'package:flutter_task/themes/colors/color_dark.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+FlutterLocalNotificationsPlugin();
 
 class HomeScreen extends StatelessWidget {
    HomeScreen({super.key});
@@ -93,9 +97,12 @@ class HomeScreen extends StatelessWidget {
                           controller: homeController.scrollController,
                           itemCount: homeController.tenDataList.length,
                           itemBuilder: (BuildContext context, int index) {
-                            return Container(
-                              /// margin: EdgeInsets.all(10),
-                             // margin: EdgeInsets.only(left: 5,right: 5),
+                            return InkWell(
+                              onTap: ()async{
+                               
+                                  await homeController.showNotification(title: homeController.dataList[index]['name'],body: homeController.dataList[index]['exchange']);
+                                Get.to(()=> DetailScreen(data: homeController.dataList[index],));
+                              },
                               child: Card(
                                 color: ColorDark.cardColor,
                                 child: Container(
@@ -117,25 +124,9 @@ class HomeScreen extends StatelessWidget {
                                                 margin: EdgeInsets.only(top: 5,bottom: 5),
                                                 child: Text('${index+1} ${homeController.dataList[index]['symbol']}',
                                                   maxLines: 3,
-                                                  style: TextStyle(color: ColorDark.collegeText,fontWeight: FontWeight.w500,fontSize: 15),),
+                                                  style: TextStyle(color: ColorDark.collegeText,fontWeight: FontWeight.w500,fontSize: textSizeSmall),),
                                               ),
 
-                                              // Container(
-                                              //   //width: 200,
-                                              //   padding: EdgeInsets.all(5),
-                                              //   decoration: BoxDecoration(
-                                              //     color: ColorDark.LatestThemeColor,
-                                              //   ),
-                                              //   child: Row(
-                                              //     crossAxisAlignment: CrossAxisAlignment.center,
-                                              //     //mainAxisAlignment: MainAxisAlignment.center,
-                                              //     children: [
-                                              //       Image.asset(ImageConstant.greyIconCollege,height:15,width: 15,fit: BoxFit.fill,color: ColorDark.colorWhite,),
-                                              //       SizedBox(width: 10,),
-                                              //       Text('Mcquaire University',style: TextStyle(fontWeight: FontWeight.w500,color: ColorDark.colorWhite,fontSize:textSizeSmallest ),),
-                                              //     ],
-                                              //   ),
-                                              // ),
                                               Container(
                                                 margin: EdgeInsets.only(top: 5,bottom: 5),
                                                 child: Text("${homeController.dataList[index]['name']}",overflow: TextOverflow.ellipsis,style: TextStyle(fontWeight: FontWeight.w500,color: ColorDark.collegeText,fontSize: textSizeSmallest)),
